@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Table(name = "task")
 public class Task {
 
-    public static final int DESCRIPTION_MAX_LENGTH = 300;
+    public static final int DESCRIPTION_MAX_LENGTH = 250;
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
