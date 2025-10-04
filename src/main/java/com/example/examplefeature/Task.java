@@ -83,4 +83,26 @@ public class Task {
         // problem.
         return getClass().hashCode();
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("- ").append(getDescription());
+
+        java.time.format.DateTimeFormatter formatter = java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        sb.append(" | Criado: ")
+                .append(getCreationDate()
+                        .atZone(java.time.ZoneId.systemDefault())
+                        .toLocalDate()
+                        .format(formatter));
+
+        if (getDueDate() != null) {
+            sb.append(" | Prazo: ")
+                    .append(getDueDate().format(formatter));
+        }
+
+        return sb.toString();
+    }
+
 }
