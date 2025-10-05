@@ -3,6 +3,9 @@ package com.example.examplefeature.ui;
 import com.example.base.ui.component.ViewToolbar;
 import com.example.examplefeature.Task;
 import com.example.examplefeature.TaskService;
+import com.google.api.client.http.javanet.NetHttpTransport;
+import com.google.api.client.json.jackson2.JacksonFactory;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.datepicker.DatePicker;
@@ -16,6 +19,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.lumo.LumoUtility;
 
+import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -74,10 +78,50 @@ class TaskListView extends Main {
     private void createTask() {
         taskService.createTask(description.getValue(), dueDate.getValue());
         taskGrid.getDataProvider().refreshAll();
+        String token = (String) UI.getCurrent().getSession().getAttribute("GOOGLE_ACCESS_TOKEN");
+        if (token != null) {
+            addEventToGoogleCalendar(token, description.getValue(), dueDate.getValue());
+        }
         description.clear();
         dueDate.clear();
         Notification.show("Task added", 3000, Notification.Position.BOTTOM_END)
                 .addThemeVariants(NotificationVariant.LUMO_SUCCESS);
+    }
+
+    private void addEventToGoogleCalendar(String accessToken, String taskDescription, LocalDate dueDate) {
+        try {
+            var transport = new NetHttpTransport();
+            var jsonFactory = JacksonFactory.getDefaultInstance();
+
+            var calendar = new com.google.api.services.calendar.Calendar.Builder(
+                    transport,
+                    jsonFactory,
+                    new com.google.api.client.http.HttpRequestInitializer() {
+                        public void initialize(com.google.api.client.http.HttpRequest request) {
+                            request.getHeaders().setAuthorization("Bearer " + accessToken);
+                        }
+                    })
+                    .setApplicationName("Vaadin ToDo App")
+                    .build();
+
+            var event = new com.google.api.services.calendar.model.Event()
+                    .setSummary(taskDescription);
+
+            if (dueDate != null) {
+                var startDateTime = new com.google.api.client.util.DateTime(
+                        java.util.Date.from(dueDate.atStartOfDay(java.time.ZoneId.systemDefault()).toInstant()));
+                var endDateTime = new com.google.api.client.util.DateTime(
+                        java.util.Date.from(dueDate.plusDays(1).atStartOfDay(java.time.ZoneId.systemDefault()).toInstant()));
+
+                event.setStart(new com.google.api.services.calendar.model.EventDateTime().setDateTime(startDateTime));
+                event.setEnd(new com.google.api.services.calendar.model.EventDateTime().setDateTime(endDateTime));
+            }
+
+            calendar.events().insert("primary", event).execute();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
