@@ -20,7 +20,7 @@ jobs:
           java-version: '21'
 
       - name: Compilar e empacotar com Maven
-        run: mvn clean package -DskipTests
+        run: mvn clean package -DskipTests -Dproject.build.sourceEncoding=UTF-8
 
       - name: Guardar artefacto (.jar)
         uses: actions/upload-artifact@v4
