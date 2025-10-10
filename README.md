@@ -7,6 +7,8 @@ Sempre que é feito um **push para a branch `main`**, o workflow executa os segu
 2. ☕ **Configura o Java 21 (Temurin)** como ambiente de execução  
 3. 🧱 **Compila e empacota o projeto com o Maven** (`mvn clean package -DskipTests`)  
 4. 📦 **Guarda o ficheiro `.jar` gerado** como artefacto de build, disponível para download na aba **Actions**
+   
+Nota: Não foi possível configurar o workflow para copiar o .jar para o repositório uma vez que o jar é demasiado grande :)
 
 ---
 
