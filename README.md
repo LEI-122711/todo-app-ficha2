@@ -25,3 +25,9 @@ Neste caso, apenas funciona com as nossas contas de gmail privadas, tal como est
 Por engano alguns commits/push foram feitos com as nossas contas pessoais:
  - LEI-122674 = Biancs13
  - LEI-122711 = Laranjaaa
+ - LEI-122677 = LFunico
+
+---
+## Twoido
+Uma vez que os github secrets apenas estão disponíveis após a geração do  '.jar' e nós não temos um web server nos nossos pcs, para efeitos de teste configurámos no nosso IDE Run Configurations para os tokens.
+Como usámos uma trial account, há um limite de mensagens que poderão ser enviadas.
