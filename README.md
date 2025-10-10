@@ -29,5 +29,5 @@ Por engano alguns commits/push foram feitos com as nossas contas pessoais:
 
 ---
 ## Twoido
-Uma vez que os github secrets apenas estão disponíveis após a geração do  '.jar' e nós não temos um web server nos nossos pcs, para efeitos de teste configurámos no nosso IDE Run Configurations para os tokens.
-Como usámos uma trial account, há um limite de mensagens que poderão ser enviadas.
+Uma vez que os github secrets apenas estão disponíveis após a geração do  `.jar` e nós não temos um web server nos nossos pcs, para efeitos de teste configurámos no nosso IDE Run Configurations para os tokens.
+Como usámos uma trial account, há um limite de mensagens que poderão ser enviadas e apenas a números pré-selecionados.
