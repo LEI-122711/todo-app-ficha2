@@ -39,13 +39,9 @@ O vídeo abaixo apresenta uma demonstração prática da aplicação To-Do List,
 
 Nesta demo é possível observar:
 
-🧾 Geração de um ficheiro PDF com a lista de tarefas do utilizador
-
-📧 Envio da lista de tarefas por e-mail, diretamente a partir da aplicação
-
-📅 Autenticação com a conta Google, permitindo a sincronização automática das tarefas com o Google Calendar
-
-📲 Envio da lista de tarefas por SMS ou WhatsApp, através da integração com o serviço Twoido
-
-O objetivo deste vídeo é ilustrar o resultado final do projeto, mostrando o fluxo completo de utilização e a integração das diferentes componentes desenvolvidas.
-https://youtu.be/ss36EOPRUTI
+1. 📅 Autenticação com a conta Google, permitindo a sincronização automática das tarefas com o Google Calendar
+2. 🧾 Geração de um ficheiro PDF com a lista de tarefas do utilizador
+3. 📧 Envio da lista de tarefas por e-mail, diretamente a partir da aplicação
+4. 📲 Envio da lista de tarefas por SMS ou WhatsApp, através da integração com o serviço Twoido
+   
+O objetivo deste vídeo é ilustrar o resultado final do projeto, mostrando o fluxo completo de utilização e a integração das diferentes componentes desenvolvidas. Ver demonstração no Youtube: https://youtu.be/ss36EOPRUTI
