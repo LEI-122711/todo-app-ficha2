@@ -18,3 +18,10 @@ A sincronização com o Google Calendar está atualmente **restrita a ambientes 
 Apenas **contas de teste selecionadas** têm acesso, de forma a limitar a utilização da API.
 
 Neste caso, apenas funciona com as nossas contas de gmail privadas, tal como está presente na demo. Se for preciso acrescentar alguma conta, é avisar-nos e nós acrescentamos.
+
+---
+## Contas Pessoais
+
+Por engano alguns commits/push foram feitos com as nossas contas pessoais:
+ - LEI-122674 = Biancs13
+ - LEI-122711 = Laranjaaa
