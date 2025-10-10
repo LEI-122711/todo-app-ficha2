@@ -31,3 +31,21 @@ Por engano alguns commits/push foram feitos com as nossas contas pessoais:
 ## Twoido
 Uma vez que os github secrets apenas estão disponíveis após a geração do  `.jar` e nós não temos um web server nos nossos pcs, para efeitos de teste configurámos no nosso IDE Run Configurations para os tokens.
 Como usámos uma trial account, há um limite de mensagens que poderão ser enviadas e apenas a números pré-selecionados.
+
+---
+## Video de demonstração da Aplicação – To-Do List
+
+O vídeo abaixo apresenta uma demonstração prática da aplicação To-Do List, após a implementação das funcionalidades desenvolvidas pelo grupo.
+
+Nesta demo é possível observar:
+
+🧾 Geração de um ficheiro PDF com a lista de tarefas do utilizador
+
+📧 Envio da lista de tarefas por e-mail, diretamente a partir da aplicação
+
+📅 Autenticação com a conta Google, permitindo a sincronização automática das tarefas com o Google Calendar
+
+📲 Envio da lista de tarefas por SMS ou WhatsApp, através da integração com o serviço Twoido
+
+O objetivo deste vídeo é ilustrar o resultado final do projeto, mostrando o fluxo completo de utilização e a integração das diferentes componentes desenvolvidas.
+https://youtu.be/ss36EOPRUTI
