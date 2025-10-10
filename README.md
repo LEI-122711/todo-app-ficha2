@@ -17,4 +17,4 @@ Nota: Não foi possível configurar o workflow para copiar o .jar para o reposit
 A sincronização com o Google Calendar está atualmente **restrita a ambientes de teste**.  
 Apenas **contas de teste selecionadas** têm acesso, de forma a limitar a utilização da API.
 
-Se pretender ser adicionado à lista de contas de teste, por favor contacte os **colaboradores do projeto**.
+Neste caso, apenas funciona com as nossas contas de gmail privadas, tal como está presente na demo. Se for preciso acrescentar alguma conta, é avisar-nos e nós acrescentamos.
