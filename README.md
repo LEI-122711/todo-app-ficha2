@@ -11,7 +11,7 @@ Nesta demo é possível observar:
 4. 📲 Envio da lista de tarefas por SMS ou WhatsApp, através da integração com o serviço Twoido
    
 O objetivo deste vídeo é ilustrar o resultado final do projeto, mostrando o fluxo completo de utilização e a integração das diferentes componentes desenvolvidas. Ver demonstração no Youtube: **(https://youtu.be/xwyGvZCXlZw)**
-
+(Nota: para melhorar a visualização colocar em 1080p :))
 ---
 
 ## ⚙️ GitHub Actions – Compilação do Projeto Java
