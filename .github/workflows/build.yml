@@ -23,6 +23,11 @@ jobs:
           java-version: '21'
 
       - name: Compilar e empacotar com Maven
+        env:
+          TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+          TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+          TWILIO_PHONE_NUMBER: ${{ secrets.TWILIO_PHONE_NUMBER }}
+          TWILIO_WHATSAPP_NUMBER: ${{ secrets.TWILIO_WHATSAPP_NUMBER }}
         run: mvn clean package -DskipTests -Dproject.build.sourceEncoding=UTF-8
 
       - name: Guardar artefacto (.jar)
@@ -30,5 +35,3 @@ jobs:
         with:
           name: app-jar
           path: target/*.jar
-          
-
