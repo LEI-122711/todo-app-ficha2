@@ -43,6 +43,7 @@ Por engano alguns commits/push foram feitos com as nossas contas pessoais:
  - LEI-122674 = Biancs13
  - LEI-122711 = Laranjaaa
  - LEI-122677 = LFunico
+ - LEI-122675 = abeatrizso
 
 ---
 ## Twoido
