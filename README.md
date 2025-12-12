@@ -1,3 +1,5 @@
+## Problema a abrir o DevContainer
+Por falta de RAM no PC o meu computador não me deixa criar o dev container  - nº122677
 
 ## Video de demonstração da Aplicação – To-Do List
 
